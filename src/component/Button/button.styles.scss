@@ -1,0 +1,31 @@
+button{
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.3s ;
+    border: none;
+}
+.button-container{
+    height: fit-content;
+    width: fit-content;
+}
+.addRecipe{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 80px;
+    background-color: red;
+}
+.saveRecipe{
+    height:40px;
+    width: 80px;
+    background-color: rgb(98, 163, 0);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
