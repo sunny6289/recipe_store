@@ -20,10 +20,28 @@ button{
     font-size: 80px;
     background-color: red;
 }
-.saveRecipe{
+.greenBtn{
     height:40px;
     width: 80px;
     background-color: rgb(98, 163, 0);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+.redBtn{
+    height:40px;
+    width: 80px;
+    background-color: rgb(216, 0, 0);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+.yellowBtn{
+    height:40px;
+    width: 80px;
+    background-color: rgb(216, 155, 0);
     color: #fff;
     font-weight: 600;
     border-radius: 5px;

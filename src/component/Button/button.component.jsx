@@ -2,7 +2,9 @@ import './button.styles.scss';
 
 const BUTTON_TYPE = {
     addRecipe: 'addRecipe',
-    saveRecipe: 'saveRecipe'
+    greenBtn: 'greenBtn',
+    redBtn: 'redBtn',
+    yellowBtn: 'yellowBtn'
 }
 
 const Button = ({onClickHandler, type,content}) => {

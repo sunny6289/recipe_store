@@ -1,0 +1,27 @@
+.recipe-container{
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    padding: 10px;
+    box-shadow: 2px 2px 14px #000;
+    .recipe-name{
+        color: rgb(57, 57, 57);
+        font-size: 30px;
+        font-weight: 700;
+        font-family: sans-serif;
+    }
+    .recipe-description{
+        color: rgb(58, 58, 58);
+        font-size: 20px;
+        font-weight: 500;
+        font-family: sans-serif;
+    }
+    .save-post-icon{
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+    }
+    .recipe-button-container{
+        display: flex;
+        gap: 7px;
+    }
+}
