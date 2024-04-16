@@ -1,14 +1,15 @@
-
 import { useContext, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import Button from "../Button/button.component";
 import './editPost.styles.scss';
 import { RecipeContext } from "../../context/recipe/recipe.context";
 
-const EditPost = ({recipe}) => {
-    const {id, recipe_name, recipe_description } = recipe;
-    const { setEditPostPopUp, editRecipeFromBlogs } = useContext(RecipeContext);
+const EditPost = () => { 
+    const { editRecipeFromBlogs, editRecipe, setEditRecipePost } = useContext(RecipeContext);
+    const {id, recipe_name, recipe_description } = editRecipe;
     const [recipeName, setRecipeName] = useState(recipe_name);
     const [recipeDescription, setRecipeDescription] = useState(recipe_description);
+    const navigate = useNavigate();
     const editPost = ()=> {
         const updatedRecipe = {
             id: id,
@@ -18,9 +19,16 @@ const EditPost = ({recipe}) => {
         editRecipeFromBlogs(updatedRecipe);
         setRecipeName("");
         setRecipeDescription("");
-        closeEditPostPopUp();
+        setEditRecipePost({});
+        navigate('/all-recipe');
     }
-    const closeEditPostPopUp = ()=> setEditPostPopUp(false);
+
+    const editCancel = ()=>{
+        setRecipeName("");
+        setRecipeDescription("");
+        setEditRecipePost({});
+        navigate('/all-recipe');
+    }
     const updateRecipeName = (e)=>{
         setRecipeName(e.target.value);
     }
@@ -34,7 +42,7 @@ const EditPost = ({recipe}) => {
                 <textarea onChange={updateRecipeDescription} className="edit-recipe-description" value={recipeDescription} />
                 <div className="edit-button-container">
                     <Button onClickHandler={editPost} type={'yellowBtn'} content={'Edit Post'}/>
-                    <Button onClickHandler={closeEditPostPopUp} type={'redBtn'} content={'Cancel'}/>
+                    <Button onClickHandler={editCancel} type={'redBtn'} content={'Cancel'}/>
                 </div>
             </div>
         </div>

@@ -1,0 +1,37 @@
+.recipe-card-container {
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    padding: 10px;
+    box-shadow: 2px 2px 14px #000;
+    .recipe-card-content{
+        cursor: pointer;
+        text-decoration: none;
+        .recipe-card-name {
+            color: rgb(57, 57, 57);
+            font-size: 30px;
+            font-weight: 700;
+            font-family: sans-serif;
+        }
+    
+        .recipe-card-description {
+            color: rgb(58, 58, 58);
+            font-size: 20px;
+            font-weight: 500;
+            font-family: sans-serif;
+            width: 500px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .recipe-card-save-post-icon {
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .recipe-card-button-container {
+        display: flex;
+        gap: 7px;
+    }
+}

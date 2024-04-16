@@ -9,12 +9,12 @@ const SavedRecipeCard = ({savedRecipe}) => {
     const removeSavedRecipe = ()=> removeFromSavedRecipes(savedRecipe);
     
     return (
-        <div className="recipe-container">
-            <div className='recipe-content'>
-                <h2 className="recipe-name">{recipe_name}</h2>
-                <p className="recipe-description">{recipe_description}</p>
+        <div className="recipe-card-container">
+            <div className='recipe-card-content'>
+                <h2 className="recipe-card-name">{recipe_name}</h2>
+                <p className="recipe-card-description">{recipe_description}</p>
             </div>
-            <div className='recipe-button-container'>
+            <div className='recipe-card-button-container'>
                 <Button onClickHandler={removeSavedRecipe}  type={'redBtn'} content={'Remove'}/>
             </div>
         </div>
